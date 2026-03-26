@@ -1,15 +1,15 @@
 # HHH Workflow Kit
 
-精简的 Java Spring Boot 企业级开发工作流系统。
+精简的 Java Spring Boot 企业级开发工作流插件，基于 [everything-claude-code](https://github.com/affaan-m/everything-claude-code) 精华提取。
 
 ## 特点
 
-- ✅ **精简** - 只有 4 个核心文件
-- ✅ **入门门槛低** - 清晰的规则和示例
-- ✅ **Java Spring Boot 专用** - 针对技术栈优化
-- ✅ **企业级** - 适合团队协作
+- ✅ **专注 Java** - 针对 Spring Boot + MyBatis + Redis + MySQL 技术栈优化
+- ✅ **精简实用** - 只保留后端开发最核心的能力
+- ✅ **开箱即用** - 安装即可使用，无需额外配置
+- ✅ **企业级** - 适合团队协作的工作流和规范
 
-## 技术栈
+## 技术栈支持
 
 - Java 17+
 - Spring Boot 3.x
@@ -17,87 +17,210 @@
 - Redis
 - MySQL
 
-## 核心工作流
+## 安装
 
-```
-理解 → 计划 → 实现 → 验证
+### 方法 1：直接从 GitHub 安装（推荐）
+
+```bash
+/plugin install Hu-Yiheng/hhh-workflow-kit
 ```
 
-每个开发任务都遵循这个 4 步流程。
+### 方法 2：通过插件市场安装
 
-## 文件结构
+```bash
+# 1. 添加插件市场
+/plugin marketplace add Hu-Yiheng/hhh-workflow-kit
 
+# 2. 安装插件
+/plugin install hhh-workflow-kit@hhh-workflow-kit
 ```
-.claude/
-├── CLAUDE.md              # 主配置入口
-└── rules/
-    ├── workflow.md        # 工作流规则（4步流程 + TDD）
-    ├── java-spring.md     # Java Spring Boot 编码规范
-    └── team-guide.md      # 团队协作指南（反模式 + 检查清单）
-```
+
+## 核心功能
+
+### 📋 命令（Commands）
+
+| 命令 | 说明 |
+|------|------|
+| `/plan` | 制定实现计划 - 在编码前先规划步骤 |
+| `/verify` | 验证实现结果 - 确保代码符合要求 |
+| `/gradle-build` | 修复 Gradle 构建错误 |
+| `/multi-backend` | 多后端服务协调 |
+
+### 🤖 智能代理（Agents）
+
+| 代理 | 说明 |
+|------|------|
+| `java-reviewer` | Java 代码审查专家 |
+| `java-build-resolver` | Java 构建问题解决专家 |
+
+### 📚 技能库（Skills）
+
+| 技能 | 说明 |
+|------|------|
+| `search-first` | 搜索优先 - 改代码前先搜调用链 |
+| `springboot-patterns` | Spring Boot 最佳实践模式 |
+| `springboot-verification` | Spring Boot 验证规范 |
+| `springboot-security` | Spring Boot 安全规范 |
+| `springboot-tdd` | Spring Boot TDD 实践 |
+| `java-coding-standards` | Java 编码标准 |
+| `api-design` | API 设计规范 |
+| `backend-patterns` | 后端架构模式 |
+| `database-migrations` | 数据库迁移规范 |
+| `postgres-patterns` | PostgreSQL 使用模式 |
+
+### 📖 规则体系（Rules）
+
+- **Common Rules** - 通用开发规范（代码风格、Git 工作流、测试、安全等）
+- **Java Rules** - Java 专项规范（编码风格、测试、模式、Hooks、安全）
 
 ## 使用方式
 
-### 1. 自动生效
-
-将此项目放在你的 Java Spring Boot 项目根目录，Claude Code 会自动加载规则。
-
-### 2. 开发流程
+### 1. 核心工作流
 
 ```
-1. 理解需求 → 明确要做什么
-2. 制定计划 → 分步骤规划
-3. TDD 实现 → 先写测试，再写代码
-4. 验证结果 → 运行测试，确保正确
+理解需求 → 制定计划 → TDD 实现 → 验证结果
 ```
 
-### 3. 关键原则
+### 2. 典型开发流程
 
-- ❌ 不要跳过计划直接编码
-- ❌ 不要跳过测试
-- ✅ 遵循 TDD（测试驱动开发）
-- ✅ 保持改动最小化
-- ✅ 重大变更前获得确认
+```bash
+# 1. 理解需求
+"我要添加用户注册功能"
 
-## 规则说明
+# 2. 制定计划
+/plan
 
-### workflow.md
-- 4 步工作流程
-- TDD 强制要求
-- Git 提交规范
+# 3. TDD 实现
+# AI 会先写测试，再写实现代码
 
-### java-spring.md
-- 代码风格和命名规范
-- Spring Boot 最佳实践
-- MyBatis/Redis/MySQL 使用规范
-- 错误处理和日志规范
-- 安全和测试要求
+# 4. 验证结果
+/verify
+```
 
-### team-guide.md
-- 常见错误和反模式
-- 危险区域警示
-- 代码审查清单
-- 团队协作指南
+### 3. 使用智能代理
 
-## 快速开始
+代理会在需要时自动调用，也可以手动指定：
 
-1. 克隆此项目到你的 Java Spring Boot 项目根目录
-2. 使用 Claude Code 开始开发
-3. AI 会自动遵循这些规则
+```bash
+# 代码审查
+"请 java-reviewer 审查这段代码"
 
-## 示例
+# 构建问题修复
+"请 java-build-resolver 修复构建错误"
+```
 
-**用户**: 我要添加一个用户注册功能
+### 4. 利用技能库
 
-**AI 会**:
-1. 理解需求（确认注册流程、字段、验证规则）
-2. 制定计划（Controller → Service → Mapper → 测试）
-3. TDD 实现（先写测试，再写代码）
-4. 验证结果（运行测试，确保覆盖率 ≥ 80%）
+技能会根据上下文自动激活，提供专业指导：
+
+- 修改代码前，`search-first` 会提醒先搜索调用链
+- 写 Spring Boot 代码时，`springboot-patterns` 会提供最佳实践
+- 安全相关代码，`springboot-security` 会进行安全检查
+
+## 关键原则
+
+### ✅ 必须遵守
+
+- **先计划后编码** - 使用 `/plan` 制定实现计划
+- **TDD 开发** - 先写测试，再写实现
+- **搜索优先** - 改代码前先搜索影响范围
+- **最小改动** - 保持改动范围最小化
+- **验证完整** - 使用 `/verify` 确保实现正确
+
+### ❌ 禁止行为
+
+- 跳过计划直接编码
+- 跳过测试
+- 不搜索就修改共享代码
+- 硬编码敏感信息
+- 静默扩大需求范围
+
+## 示例场景
+
+### 场景 1：添加新功能
+
+```
+用户: 添加用户注册功能
+
+AI 执行流程:
+1. 理解需求 - 确认注册流程、字段、验证规则
+2. /plan - 制定实现计划（Controller → Service → Mapper → 测试）
+3. TDD 实现 - 先写测试，再写代码
+4. /verify - 验证测试覆盖率 ≥ 80%，功能正确
+```
+
+### 场景 2：修复构建错误
+
+```
+用户: Gradle 构建失败了
+
+AI 执行流程:
+1. 调用 java-build-resolver 代理
+2. 分析错误日志
+3. 定位问题根源
+4. 提供修复方案
+5. 验证构建成功
+```
+
+### 场景 3：代码审查
+
+```
+用户: 审查这段代码
+
+AI 执行流程:
+1. 调用 java-reviewer 代理
+2. 检查代码风格、安全、性能
+3. 提供改进建议
+4. 标注严重程度（CRITICAL/HIGH/MEDIUM/LOW）
+```
+
+## 项目结构
+
+```
+hhh-workflow-kit/
+├── .claude-plugin/
+│   ├── plugin.json           # 插件配置
+│   └── marketplace.json      # 市场配置
+├── commands/                 # 命令目录
+│   ├── plan.md
+│   ├── verify.md
+│   ├── gradle-build.md
+│   └── multi-backend.md
+├── agents/                   # 代理目录
+│   ├── java-reviewer.md
+│   └── java-build-resolver.md
+├── skills/                   # 技能目录
+│   ├── search-first/
+│   ├── springboot-patterns/
+│   ├── java-coding-standards/
+│   └── ...
+├── rules/                    # 规则目录
+│   ├── common/              # 通用规则
+│   └── java/                # Java 规则
+├── AGENTS.md                # 项目总入口
+└── README.md
+```
+
+## 更新插件
+
+```bash
+# 更新到最新版本
+/plugin update hhh-workflow-kit
+```
+
+## 卸载插件
+
+```bash
+/plugin uninstall hhh-workflow-kit
+```
 
 ## 参考来源
 
-基于 [everything-claude-code](https://github.com/affaan-m/everything-claude-code) 提取精华，专为 Java Spring Boot 企业级项目优化。
+本插件基于 [everything-claude-code](https://github.com/affaan-m/everything-claude-code) 提取精华，专注于 Java Spring Boot 企业级开发场景。
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request。
 
 ## License
 

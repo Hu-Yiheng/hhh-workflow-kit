@@ -15,5 +15,8 @@
     "tdd",
     "enterprise"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "commands": "./commands",
+  "agents": "./agents",
+  "skills": "./skills"
 }

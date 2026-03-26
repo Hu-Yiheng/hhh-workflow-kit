@@ -5,6 +5,9 @@
   "author": {
     "name": "HHH Engineering"
   },
+  "homepage": "https://github.com/Hu-Yiheng/hhh-workflow-kit",
+  "repository": "https://github.com/Hu-Yiheng/hhh-workflow-kit",
+  "license": "MIT",
   "keywords": [
     "java",
     "spring-boot",
@@ -14,9 +17,5 @@
     "workflow",
     "tdd",
     "enterprise"
-  ],
-  "license": "MIT",
-  "commands": "./commands",
-  "agents": "./agents",
-  "skills": "./skills"
+  ]
 }

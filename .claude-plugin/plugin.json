@@ -19,5 +19,8 @@
     "enterprise"
   ],
   "commands": "./commands",
-  "agents": "./agents"
+  "agents": [
+    "./agents/java-build-resolver.md",
+    "./agents/java-reviewer.md"
+  ]
 }

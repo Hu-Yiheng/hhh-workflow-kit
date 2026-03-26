@@ -1,0 +1,19 @@
+{
+  "name": "hhh-workflow-kit",
+  "version": "0.1.0",
+  "description": "Streamlined Java Spring Boot development workflow kit for enterprise teams",
+  "author": {
+    "name": "HHH Engineering"
+  },
+  "keywords": [
+    "java",
+    "spring-boot",
+    "mybatis",
+    "redis",
+    "mysql",
+    "workflow",
+    "tdd",
+    "enterprise"
+  ],
+  "license": "MIT"
+}

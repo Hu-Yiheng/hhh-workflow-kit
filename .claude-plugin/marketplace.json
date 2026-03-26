@@ -1,0 +1,13 @@
+{
+  "name": "hhh-marketplace",
+  "owner": {
+    "name": "HHH Engineering"
+  },
+  "plugins": [
+    {
+      "name": "hhh",
+      "source": "./plugins/hhh-core",
+      "description": "HHH AI coding workflow kit"
+    }
+  ]
+}

@@ -17,5 +17,7 @@
     "workflow",
     "tdd",
     "enterprise"
-  ]
+  ],
+  "commands": "./commands",
+  "agents": "./agents"
 }

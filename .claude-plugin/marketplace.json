@@ -1,13 +1,33 @@
 {
-  "name": "hhh-marketplace",
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hhh-workflow-kit",
+  "description": "Streamlined Java Spring Boot development workflow kit for enterprise teams",
   "owner": {
     "name": "HHH Engineering"
   },
   "plugins": [
     {
-      "name": "hhh",
-      "source": "./plugins/hhh-core",
-      "description": "HHH AI coding workflow kit"
+      "name": "hhh-workflow-kit",
+      "source": "./",
+      "description": "Java Spring Boot workflow kit with agents, skills, and commands for enterprise development",
+      "version": "0.1.0",
+      "author": {
+        "name": "HHH Engineering"
+      },
+      "homepage": "https://github.com/Hu-Yiheng/hhh-workflow-kit",
+      "repository": "https://github.com/Hu-Yiheng/hhh-workflow-kit",
+      "license": "MIT",
+      "keywords": [
+        "java",
+        "spring-boot",
+        "mybatis",
+        "redis",
+        "mysql",
+        "workflow",
+        "tdd",
+        "enterprise"
+      ],
+      "category": "workflow"
     }
   ]
 }

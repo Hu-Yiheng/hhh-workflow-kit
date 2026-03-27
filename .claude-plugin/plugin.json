@@ -21,6 +21,7 @@
   "commands": "./commands",
   "agents": [
     "./agents/java-build-resolver.md",
-    "./agents/java-reviewer.md"
+    "./agents/java-reviewer.md",
+    "./agents/e2e-runner.md"
   ]
 }
